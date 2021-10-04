@@ -1,0 +1,17 @@
+C:\Users\amaur\source\repos\Cognac-Behourd\Cognac-Behourd\bin\Debug\netcoreapp3.1\Cognac-Behourd.exe
+C:\Users\amaur\source\repos\Cognac-Behourd\Cognac-Behourd\bin\Debug\netcoreapp3.1\Cognac-Behourd.deps.json
+C:\Users\amaur\source\repos\Cognac-Behourd\Cognac-Behourd\bin\Debug\netcoreapp3.1\Cognac-Behourd.runtimeconfig.json
+C:\Users\amaur\source\repos\Cognac-Behourd\Cognac-Behourd\bin\Debug\netcoreapp3.1\Cognac-Behourd.runtimeconfig.dev.json
+C:\Users\amaur\source\repos\Cognac-Behourd\Cognac-Behourd\bin\Debug\netcoreapp3.1\Cognac-Behourd.dll
+C:\Users\amaur\source\repos\Cognac-Behourd\Cognac-Behourd\bin\Debug\netcoreapp3.1\Cognac-Behourd.pdb
+C:\Users\amaur\source\repos\Cognac-Behourd\Cognac-Behourd\bin\Debug\netcoreapp3.1\Cognac-Behourd.Class.dll
+C:\Users\amaur\source\repos\Cognac-Behourd\Cognac-Behourd\bin\Debug\netcoreapp3.1\Cognac-Behourd.Class.pdb
+C:\Users\amaur\source\repos\Cognac-Behourd\Cognac-Behourd\obj\Debug\netcoreapp3.1\Cognac-Behourd.csproj.AssemblyReference.cache
+C:\Users\amaur\source\repos\Cognac-Behourd\Cognac-Behourd\obj\Debug\netcoreapp3.1\Cognac-Behourd.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\amaur\source\repos\Cognac-Behourd\Cognac-Behourd\obj\Debug\netcoreapp3.1\Cognac-Behourd.AssemblyInfoInputs.cache
+C:\Users\amaur\source\repos\Cognac-Behourd\Cognac-Behourd\obj\Debug\netcoreapp3.1\Cognac-Behourd.AssemblyInfo.cs
+C:\Users\amaur\source\repos\Cognac-Behourd\Cognac-Behourd\obj\Debug\netcoreapp3.1\Cognac-Behourd.csproj.CoreCompileInputs.cache
+C:\Users\amaur\source\repos\Cognac-Behourd\Cognac-Behourd\obj\Debug\netcoreapp3.1\Cognac-Behourd.csproj.CopyComplete
+C:\Users\amaur\source\repos\Cognac-Behourd\Cognac-Behourd\obj\Debug\netcoreapp3.1\Cognac-Behourd.dll
+C:\Users\amaur\source\repos\Cognac-Behourd\Cognac-Behourd\obj\Debug\netcoreapp3.1\Cognac-Behourd.pdb
+C:\Users\amaur\source\repos\Cognac-Behourd\Cognac-Behourd\obj\Debug\netcoreapp3.1\Cognac-Behourd.genruntimeconfig.cache

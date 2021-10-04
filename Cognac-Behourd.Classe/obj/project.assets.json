@@ -1,30 +1,11 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.1": {
-      "Cognac-Behourd.Class/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v3.1",
-        "compile": {
-          "bin/placeholder/Cognac-Behourd.Class.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Cognac-Behourd.Class.dll": {}
-        }
-      }
-    }
+    ".NETCoreApp,Version=v3.1": {}
   },
-  "libraries": {
-    "Cognac-Behourd.Class/1.0.0": {
-      "type": "project",
-      "path": "../Cognac-Behourd.Classe/Cognac-Behourd.Class.csproj",
-      "msbuildProject": "../Cognac-Behourd.Classe/Cognac-Behourd.Class.csproj"
-    }
-  },
+  "libraries": {},
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.1": [
-      "Cognac-Behourd.Class >= 1.0.0"
-    ]
+    ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
     "C:\\Users\\amaur\\.nuget\\packages\\": {},
@@ -34,11 +15,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\amaur\\source\\repos\\Cognac-Behourd\\Cognac-Behourd\\Cognac-Behourd.csproj",
-      "projectName": "Cognac-Behourd",
-      "projectPath": "C:\\Users\\amaur\\source\\repos\\Cognac-Behourd\\Cognac-Behourd\\Cognac-Behourd.csproj",
+      "projectUniqueName": "C:\\Users\\amaur\\source\\repos\\Cognac-Behourd\\Cognac-Behourd.Classe\\Cognac-Behourd.Class.csproj",
+      "projectName": "Cognac-Behourd.Class",
+      "projectPath": "C:\\Users\\amaur\\source\\repos\\Cognac-Behourd\\Cognac-Behourd.Classe\\Cognac-Behourd.Class.csproj",
       "packagesPath": "C:\\Users\\amaur\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\amaur\\source\\repos\\Cognac-Behourd\\Cognac-Behourd\\obj\\",
+      "outputPath": "C:\\Users\\amaur\\source\\repos\\Cognac-Behourd\\Cognac-Behourd.Classe\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
@@ -59,11 +40,7 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "projectReferences": {
-            "C:\\Users\\amaur\\source\\repos\\Cognac-Behourd\\Cognac-Behourd.Classe\\Cognac-Behourd.Class.csproj": {
-              "projectPath": "C:\\Users\\amaur\\source\\repos\\Cognac-Behourd\\Cognac-Behourd.Classe\\Cognac-Behourd.Class.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {

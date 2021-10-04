@@ -6,4 +6,8 @@
     <RootNamespace>Cognac_Behourd</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Cognac-Behourd.Classe\Cognac-Behourd.Class.csproj" />
+  </ItemGroup>
+
 </Project>
