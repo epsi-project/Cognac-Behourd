@@ -8,7 +8,7 @@ namespace Cognac_Behourd.Classe
     {
         public Session()
         {
-
+            Joueurs = new List<Personne>();
         }
     
         public Partie PartieEnCours { get; set; }
@@ -17,12 +17,17 @@ namespace Cognac_Behourd.Classe
 
         public void AjouterJoueur(Personne arrivant)
         {
-            throw new NotImplementedException();
+            Joueurs.Add(arrivant);
+        }
+
+        public void AjouterJoueurs(IEnumerable<Personne> personnes)
+        {
+            Joueurs.AddRange(personnes);
         }
 
         public void LancerProchainePartie()
         {
-            throw new NotImplementedException();
+            this.PartieEnCours = new Partie(Joueurs);
         }
     }
 }

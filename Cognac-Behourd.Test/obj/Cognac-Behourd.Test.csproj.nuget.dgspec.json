@@ -1,25 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "/Users/theooiry/Code/Projects/Cognac-Behourd/Cognac-Behourd.Test/Cognac-Behourd.Test.csproj": {}
+    "C:\\Users\\amaur\\source\\repos\\Cognac-Behourd\\Cognac-Behourd.Test\\Cognac-Behourd.Test.csproj": {}
   },
   "projects": {
-    "/Users/theooiry/Code/Projects/Cognac-Behourd/Cognac-Behourd.Classe/Cognac-Behourd.Class.csproj": {
+    "C:\\Users\\amaur\\source\\repos\\Cognac-Behourd\\Cognac-Behourd.Classe\\Cognac-Behourd.Class.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/theooiry/Code/Projects/Cognac-Behourd/Cognac-Behourd.Classe/Cognac-Behourd.Class.csproj",
+        "projectUniqueName": "C:\\Users\\amaur\\source\\repos\\Cognac-Behourd\\Cognac-Behourd.Classe\\Cognac-Behourd.Class.csproj",
         "projectName": "Cognac-Behourd.Class",
-        "projectPath": "/Users/theooiry/Code/Projects/Cognac-Behourd/Cognac-Behourd.Classe/Cognac-Behourd.Class.csproj",
-        "packagesPath": "/Users/theooiry/.nuget/packages/",
-        "outputPath": "/Users/theooiry/Code/Projects/Cognac-Behourd/Cognac-Behourd.Classe/obj/",
+        "projectPath": "C:\\Users\\amaur\\source\\repos\\Cognac-Behourd\\Cognac-Behourd.Classe\\Cognac-Behourd.Class.csproj",
+        "packagesPath": "C:\\Users\\amaur\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\amaur\\source\\repos\\Cognac-Behourd\\Cognac-Behourd.Classe\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "/Users/theooiry/.config/NuGet/NuGet.Config"
+          "C:\\Users\\amaur\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -52,34 +59,41 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.413/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/theooiry/Code/Projects/Cognac-Behourd/Cognac-Behourd.Test/Cognac-Behourd.Test.csproj": {
+    "C:\\Users\\amaur\\source\\repos\\Cognac-Behourd\\Cognac-Behourd.Test\\Cognac-Behourd.Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/theooiry/Code/Projects/Cognac-Behourd/Cognac-Behourd.Test/Cognac-Behourd.Test.csproj",
+        "projectUniqueName": "C:\\Users\\amaur\\source\\repos\\Cognac-Behourd\\Cognac-Behourd.Test\\Cognac-Behourd.Test.csproj",
         "projectName": "Cognac-Behourd.Test",
-        "projectPath": "/Users/theooiry/Code/Projects/Cognac-Behourd/Cognac-Behourd.Test/Cognac-Behourd.Test.csproj",
-        "packagesPath": "/Users/theooiry/.nuget/packages/",
-        "outputPath": "/Users/theooiry/Code/Projects/Cognac-Behourd/Cognac-Behourd.Test/obj/",
+        "projectPath": "C:\\Users\\amaur\\source\\repos\\Cognac-Behourd\\Cognac-Behourd.Test\\Cognac-Behourd.Test.csproj",
+        "packagesPath": "C:\\Users\\amaur\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\amaur\\source\\repos\\Cognac-Behourd\\Cognac-Behourd.Test\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "/Users/theooiry/.config/NuGet/NuGet.Config"
+          "C:\\Users\\amaur\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "/Users/theooiry/Code/Projects/Cognac-Behourd/Cognac-Behourd/Cognac-Behourd.csproj": {
-                "projectPath": "/Users/theooiry/Code/Projects/Cognac-Behourd/Cognac-Behourd/Cognac-Behourd.csproj"
+              "C:\\Users\\amaur\\source\\repos\\Cognac-Behourd\\Cognac-Behourd\\Cognac-Behourd.csproj": {
+                "projectPath": "C:\\Users\\amaur\\source\\repos\\Cognac-Behourd\\Cognac-Behourd\\Cognac-Behourd.csproj"
               }
             }
           }
@@ -130,34 +144,41 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.413/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/theooiry/Code/Projects/Cognac-Behourd/Cognac-Behourd/Cognac-Behourd.csproj": {
+    "C:\\Users\\amaur\\source\\repos\\Cognac-Behourd\\Cognac-Behourd\\Cognac-Behourd.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/theooiry/Code/Projects/Cognac-Behourd/Cognac-Behourd/Cognac-Behourd.csproj",
+        "projectUniqueName": "C:\\Users\\amaur\\source\\repos\\Cognac-Behourd\\Cognac-Behourd\\Cognac-Behourd.csproj",
         "projectName": "Cognac-Behourd",
-        "projectPath": "/Users/theooiry/Code/Projects/Cognac-Behourd/Cognac-Behourd/Cognac-Behourd.csproj",
-        "packagesPath": "/Users/theooiry/.nuget/packages/",
-        "outputPath": "/Users/theooiry/Code/Projects/Cognac-Behourd/Cognac-Behourd/obj/",
+        "projectPath": "C:\\Users\\amaur\\source\\repos\\Cognac-Behourd\\Cognac-Behourd\\Cognac-Behourd.csproj",
+        "packagesPath": "C:\\Users\\amaur\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\amaur\\source\\repos\\Cognac-Behourd\\Cognac-Behourd\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "/Users/theooiry/.config/NuGet/NuGet.Config"
+          "C:\\Users\\amaur\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "/Users/theooiry/Code/Projects/Cognac-Behourd/Cognac-Behourd.Classe/Cognac-Behourd.Class.csproj": {
-                "projectPath": "/Users/theooiry/Code/Projects/Cognac-Behourd/Cognac-Behourd.Classe/Cognac-Behourd.Class.csproj"
+              "C:\\Users\\amaur\\source\\repos\\Cognac-Behourd\\Cognac-Behourd.Classe\\Cognac-Behourd.Class.csproj": {
+                "projectPath": "C:\\Users\\amaur\\source\\repos\\Cognac-Behourd\\Cognac-Behourd.Classe\\Cognac-Behourd.Class.csproj"
               }
             }
           }
@@ -186,7 +207,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.413/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

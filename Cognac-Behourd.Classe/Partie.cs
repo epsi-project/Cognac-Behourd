@@ -5,8 +5,9 @@ namespace Cognac_Behourd.Class
 {
     public class Partie
     {
-        public Partie()
+        public Partie(List<Personne> joueurs)
         {
+            Joueurs = joueurs;
         }
 
         public List<Personne> Joueurs { get; set; }
