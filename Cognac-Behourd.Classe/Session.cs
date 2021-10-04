@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using Cognac_Behourd.Class;
 
 namespace Cognac_Behourd.Classe
 {
@@ -8,8 +10,17 @@ namespace Cognac_Behourd.Classe
         {
 
         }
+    
+        public Partie PartieEnCours { get; set; }
+   
+        public List<Personne> Joueurs { get; set; }
 
-        public object Suivante()
+        public void AjouterJoueur(Personne arrivant)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void LancerProchainePartie()
         {
             throw new NotImplementedException();
         }
