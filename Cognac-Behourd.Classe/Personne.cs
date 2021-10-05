@@ -13,9 +13,18 @@ namespace Cognac_Behourd.Class
         public DateTime DateAdhesion { get; set; }
 
         public float Poids { get; set; }
+        public DateTime DateDeNaissance { get; set; }
 
+        public int Age {
+            get
+            {
+                return DateTime.Today.Year - DateDeNaissance.Year -
+                     (DateTime.Today.Month < DateDeNaissance.Month ? 1 :
+                     DateTime.Today.Day < DateDeNaissance.Day ? 1 : 0);
+            }
+        }
 
-        public Personne(Arme arme, Armure armure, string prenom, string nom, DateTime dateAdhesion, float poids)
+        public Personne(Arme arme, Armure armure, string prenom, string nom, DateTime dateAdhesion, float poids, DateTime dateDeNaissance)
         {
             Arme = arme;
             Armure = armure;
@@ -23,6 +32,7 @@ namespace Cognac_Behourd.Class
             Nom = nom;
             DateAdhesion = dateAdhesion;
             Poids = poids;
+            DateDeNaissance = dateDeNaissance;
         }
     }
 }
