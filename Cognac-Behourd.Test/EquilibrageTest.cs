@@ -11,7 +11,7 @@ namespace Cognac_Behourd.Test
     public class EquilibrageTest
     {
         [Fact]
-        public void Les_Equipes_Sont_Equilibre_En_Nombre()
+        public void Les_Equipes_Sont_Equilibres_En_Nombre()
         {
             Session session = new Session();
 
@@ -22,12 +22,11 @@ namespace Cognac_Behourd.Test
             int nombreDeJoueursEquipeUn = session.PartieEnCours.EquipeUn.Joueurs.Count;
             int nombreDeJoueursEquipeDeux = session.PartieEnCours.EquipeDeux.Joueurs.Count;
 
-            Assert.Equal(2, nombreDeJoueursEquipeUn);
-            Assert.Equal(2, nombreDeJoueursEquipeDeux);
+            Assert.Equal(nombreDeJoueursEquipeUn, nombreDeJoueursEquipeDeux);
         }
 
         [Fact]
-        public void Les_Equipes_Sont_Equilibre_En_Poids()
+        public void Les_Equipes_Sont_Equilibres_En_Poids()
         {
             Session session = new Session();
 
@@ -51,7 +50,7 @@ namespace Cognac_Behourd.Test
         }
 
         [Fact]
-        public void Les_Equipes_Sont_Equilibre_En_Experience()
+        public void Les_Equipes_Sont_Equilibres_En_Experience()
         {
             Session session = new Session();
 
@@ -63,7 +62,7 @@ namespace Cognac_Behourd.Test
                 .Build(4);
 
             List<Personne> joueursNonExperimentes = personneBuilder
-                .SetDateAdhesion(DateTime.Today.AddYears(-10))
+                .SetDateAdhesion(DateTime.Today.AddYears(-1))
                 .Build(4);
 
             session.AjouterJoueurs(joueursExperimentes);
