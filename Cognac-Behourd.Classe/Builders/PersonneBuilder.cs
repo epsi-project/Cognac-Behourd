@@ -9,13 +9,13 @@ namespace Cognac_Behourd.Class.Builders
     {
         private static Random random = new Random();
 
-        public Arme Arme { get; set; } = new Arme();
-        public Armure Armure { get; set; } = new Armure();
-        public string Prenom { get; set; } = string.Empty;
-        public string Nom { get; set; } = string.Empty;
-        public DateTime DateAdhesion { get; set; } = DateTime.Now;
-        public DateTime DateDeNaissance { get; set; } = DateTime.Now.AddYears(-25);
-        public float Poids { get; set; } = 0f;
+        private Arme arme = new Arme();
+        private Armure armure = new Armure();
+        private string prenom = string.Empty;
+        private string nom = string.Empty;
+        private DateTime dateAdhesion = DateTime.Now;
+        private DateTime dateDeNaissance = DateTime.Now.AddYears(-25);
+        private float poids = 0f;
 
         public PersonneBuilder()
         {
@@ -24,16 +24,16 @@ namespace Cognac_Behourd.Class.Builders
 
         public PersonneBuilder SetNomPrenom(string nom, string prenom)
         {
-            Nom = nom;
-            Prenom = prenom;
+            this.nom = nom;
+            this.prenom = prenom;
 
             return this;
         }
 
         public PersonneBuilder SetRandomNomPrenom()
         {
-            Nom = RandomString(5);
-            Prenom = RandomString(5);
+            nom = RandomString(5);
+            prenom = RandomString(5);
 
             return this;
         }
@@ -47,35 +47,35 @@ namespace Cognac_Behourd.Class.Builders
 
         public PersonneBuilder SetArme(Arme arme)
         {
-            Arme = arme;
+            this.arme = arme;
             return this;
         }
         public PersonneBuilder SetArmure(Armure armure)
         {
-            Armure = armure;
+            this.armure = armure;
             return this;
         }
 
         public PersonneBuilder SetDateAdhesion(DateTime date)
         {
-            DateAdhesion = date;
+            dateAdhesion = date;
             return this;
         }
 
         public PersonneBuilder SetPoids(float poids)
         {
-            Poids = poids;
+            this.poids = poids;
             return this;
         }
         public PersonneBuilder SetDateNaissance(DateTime dateTime)
         {
-            DateDeNaissance = dateTime;
+            dateDeNaissance = dateTime;
             return this;
         }
 
         public Personne Build()
         {
-            return new Personne(Arme, Armure, Prenom, Nom, DateAdhesion, Poids, DateDeNaissance);
+            return new Personne(arme, armure, prenom, nom, dateAdhesion, poids, dateDeNaissance);
         }
 
         public List<Personne> Build(int number)
