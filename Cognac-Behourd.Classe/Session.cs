@@ -36,5 +36,15 @@ namespace Cognac_Behourd.Classe
         {
             this.PartieEnCours = new Partie(Joueurs);
         }
+
+        public void SupprimerJoueur(Personne joueur)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SupprimerJoueurs(IEnumerable<Personne> joueursQuiPartent)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

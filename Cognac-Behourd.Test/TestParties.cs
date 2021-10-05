@@ -85,5 +85,46 @@ namespace Cognac_Behourd.Test
             Assert.Throws<InvalidOperationException>(() => session.AjouterJoueurs(joueurs));
             Assert.Empty(session.Joueurs);
         }
+
+        [Fact]
+        public void Une_Personne_Peux_Quitter_Une_Session_En_Cours()
+        {
+            Session session = new Session();
+
+            Personne joueurDeDepart = new PersonneBuilder().Build();
+
+            session.AjouterJoueur(joueurDeDepart);
+
+            session.LancerProchainePartie();
+
+            Assert.NotEmpty(session.PartieEnCours.Joueurs);
+
+            session.SupprimerJoueur(joueurDeDepart);
+
+            session.LancerProchainePartie();
+
+            Assert.Empty(session.PartieEnCours.Joueurs);
+        }
+
+        [Fact]
+        public void Des_Personnes_Peuvent_Quitter_Une_Session_En_Cours()
+        {
+            Session session = new Session();
+
+            IEnumerable<Personne> joueursDeDepart = new PersonneBuilder().Build(6);
+
+            IEnumerable<Personne> joueursQuiPartent = joueursDeDepart.Take(2);
+
+            session.AjouterJoueurs(joueursDeDepart);
+
+            session.LancerProchainePartie();
+
+            session.SupprimerJoueurs(joueursQuiPartent);
+
+            session.LancerProchainePartie();
+
+            Assert.Equal(joueursDeDepart.Count() - joueursQuiPartent.Count(), session.PartieEnCours.Joueurs.Count);
+            Assert.DoesNotContain(session.PartieEnCours.Joueurs, j => joueursQuiPartent.Contains(j));
+        }
     }
 }
