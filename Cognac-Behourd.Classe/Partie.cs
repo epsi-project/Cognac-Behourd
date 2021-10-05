@@ -9,7 +9,7 @@ namespace Cognac_Behourd.Class
     {
         public Partie(List<Personne> joueurs)
         {
-            Joueurs = joueurs;
+            Joueurs = joueurs.ToList();
             EquilibrageDesEquipes();
         }
 
@@ -32,7 +32,7 @@ namespace Cognac_Behourd.Class
                     .Take(quart)
                 ).ToList();
 
-            List<Personne> joueursEquipeDeux = Joueurs
+            List<Personne> joueursEquipeDeux = joueurTrie
                 .Skip(quart)
                 .Take(moitier)
                 .ToList();

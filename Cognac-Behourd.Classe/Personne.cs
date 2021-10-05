@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Cognac_Behourd.Class.Extensions;
 using Cognac_Behourd.Class.Interfaces;
 

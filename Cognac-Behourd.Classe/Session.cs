@@ -12,9 +12,9 @@ namespace Cognac_Behourd.Classe
             Joueurs = new List<Personne>();
         }
     
-        public Partie PartieEnCours { get; private set; }
+        public Partie PartieEnCours { get; set; }
    
-        public List<Personne> Joueurs { get; private set; }
+        public List<Personne> Joueurs { get; set; }
 
         public void AjouterJoueur(Personne arrivant)
         {
@@ -35,6 +35,22 @@ namespace Cognac_Behourd.Classe
         public void LancerProchainePartie()
         {
             PartieEnCours = new Partie(Joueurs);
+        }
+
+        public void SupprimerJoueur(Personne joueur)
+        {
+            if (Joueurs.Any(j => j == joueur))
+                Joueurs.Remove(joueur);
+            else
+                throw new InvalidOperationException("Joueur non présent dans la partie");
+        }
+
+        public void SupprimerJoueurs(IEnumerable<Personne> joueursQuiPartent)
+        {
+            if(joueursQuiPartent.Any(j => !Joueurs.Contains(j)))
+                throw new InvalidOperationException("Joueur non présent dans la partie");
+            
+            Joueurs.RemoveAll(j => joueursQuiPartent.Contains(j));
         }
     }
 }
