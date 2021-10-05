@@ -12,9 +12,9 @@ namespace Cognac_Behourd.Classe
             Joueurs = new List<Personne>();
         }
     
-        public Partie PartieEnCours { get; set; }
+        public Partie PartieEnCours { get; private set; }
    
-        public List<Personne> Joueurs { get; set; }
+        public List<Personne> Joueurs { get; private set; }
 
         public void AjouterJoueur(Personne arrivant)
         {
@@ -34,7 +34,7 @@ namespace Cognac_Behourd.Classe
 
         public void LancerProchainePartie()
         {
-            this.PartieEnCours = new Partie(Joueurs);
+            PartieEnCours = new Partie(Joueurs);
         }
     }
 }

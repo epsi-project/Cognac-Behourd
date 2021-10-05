@@ -32,7 +32,7 @@ namespace Cognac_Behourd.Class.Extensions
 
         public static CategoriePoids GetCategoriePoidsParPoids(float poids)
         {
-            int key = categorieParPoidsMax.Keys.OrderBy(k => k).First(k => k < poids);
+            int key = categorieParPoidsMax.Keys.OrderBy(k => k).First(k => k > poids);
             return categorieParPoidsMax[key];
         }
     }
