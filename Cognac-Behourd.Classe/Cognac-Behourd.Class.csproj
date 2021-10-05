@@ -5,4 +5,7 @@
     <RootNamespace>Cognac_Behourd.Class</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Enumerations\" />
+  </ItemGroup>
 </Project>

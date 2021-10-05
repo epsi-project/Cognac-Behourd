@@ -11,5 +11,7 @@ namespace Cognac_Behourd.Class
         }
 
         public List<Personne> Joueurs { get; set; }
+        public Equipe EquipeUn { get; set; }
+        public Equipe EquipeDeux { get; set; }
     }
 }
