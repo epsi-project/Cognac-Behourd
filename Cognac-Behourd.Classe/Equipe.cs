@@ -10,6 +10,11 @@ namespace Cognac_Behourd.Class
         {
         }
 
+        public Equipe(List<Personne> joueurs)
+        {
+            Joueurs = joueurs;
+        }
+
         public List<Personne> Joueurs { get; }
         public CategoriePoids CategoriePoidsMoyen { get; }
         public int TotalAnneeExperience { get; }

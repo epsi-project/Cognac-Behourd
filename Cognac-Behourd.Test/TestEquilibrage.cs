@@ -8,7 +8,7 @@ using Xunit;
 
 namespace Cognac_Behourd.Test
 {
-    public class EquilibrageTest
+    public class TestEquilibrage
     {
         [Fact]
         public void Les_Equipes_Sont_Equilibres_En_Nombre()
