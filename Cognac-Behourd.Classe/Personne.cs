@@ -13,7 +13,7 @@ namespace Cognac_Behourd.Class
         public DateTime DateAdhesion { get; set; }
 
         public float Poids { get; set; }
-
+        public DateTime DateDeNaissance { get; set; }
 
         public Personne(Arme arme, Armure armure, string prenom, string nom, DateTime dateAdhesion, float poids)
         {

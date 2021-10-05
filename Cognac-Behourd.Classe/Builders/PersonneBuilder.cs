@@ -66,6 +66,10 @@ namespace Cognac_Behourd.Class.Builders
             Poids = poids;
             return this;
         }
+        public PersonneBuilder SetDateNaissance(DateTime dateTime)
+        {
+            throw new NotImplementedException();
+        }
 
         public Personne Build()
         {
@@ -76,5 +80,6 @@ namespace Cognac_Behourd.Class.Builders
         {
             return Enumerable.Range(0, number).Select(_ => Build()).ToList();
         }
+
     }
 }

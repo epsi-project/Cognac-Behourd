@@ -65,5 +65,22 @@ namespace Cognac_Behourd.Test
 
             Assert.Equal(joueursInitiaux, joueursApresAjout);
         }
+
+        [Fact]
+        public void Une_Personne_Qui_Rejoint_La_Session_A_Plus_De_16_ans()
+        {
+            Session session = new Session();
+
+            List<Personne> joueurs = new PersonneBuilder()
+                .SetDateNaissance(DateTime.Today.AddYears(-20))
+                .Build(10);
+
+            joueurs.AddRange(new PersonneBuilder()
+                .SetDateNaissance(DateTime.Today.AddYears(-15))
+                .Build(2));
+
+            Assert.Throws<InvalidOperationException>(() => session.AjouterJoueurs(joueurs));
+            Assert.True(joueurs.All(j => j.Age > 16));
+        }
     }
 }
