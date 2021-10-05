@@ -71,12 +71,15 @@ namespace Cognac_Behourd.Test
         {
             Session session = new Session();
 
+            DateTime moinsDeSeizeAns = DateTime.Today.AddYears(-15);
+            DateTime plusDeSeizeAns = DateTime.Today.AddYears(-20);
+
             List<Personne> joueurs = new PersonneBuilder()
-                .SetDateNaissance(DateTime.Today.AddYears(-20))
-                .Build(1);
+                .SetDateNaissance(plusDeSeizeAns)
+                .Build(10);
 
             joueurs.AddRange(new PersonneBuilder()
-                .SetDateNaissance(DateTime.Today.AddYears(-15))
+                .SetDateNaissance(moinsDeSeizeAns)
                 .Build(2));
 
             Assert.Throws<InvalidOperationException>(() => session.AjouterJoueurs(joueurs));
