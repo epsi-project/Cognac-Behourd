@@ -18,11 +18,11 @@ namespace Cognac_Behourd.Test
             session.AjouterJoueurs(new PersonneBuilder().Build(4));
             session.LancerProchainePartie();
 
-            IEnumerable<Arme> armesDesJoueursInitiaux = session.PartieEnCours.Joueurs.Select(j => j.Arme);
+            IEnumerable<Arme> armesDesJoueursInitiaux = session.PartieEnCours.Joueurs.Select(j => j.Arme).ToArray();
 
             session.LancerProchainePartie();
 
-            IEnumerable<Arme> armesDesJoueursSuivants = session.PartieEnCours.Joueurs.Select(j => j.Arme);
+            IEnumerable<Arme> armesDesJoueursSuivants = session.PartieEnCours.Joueurs.Select(j => j.Arme).ToArray();
 
             Assert.Equal(armesDesJoueursSuivants, armesDesJoueursInitiaux);
         }
@@ -35,11 +35,11 @@ namespace Cognac_Behourd.Test
             session.AjouterJoueurs(new PersonneBuilder().Build(4));
             session.LancerProchainePartie();
 
-            IEnumerable<Armure> armuresDesJoueursInitiaux = session.PartieEnCours.Joueurs.Select(j => j.Armure);
+            IEnumerable<Armure> armuresDesJoueursInitiaux = session.PartieEnCours.Joueurs.Select(j => j.Armure).ToArray();
 
             session.LancerProchainePartie();
 
-            IEnumerable<Armure> armuresDesJoueursSuivants = session.PartieEnCours.Joueurs.Select(j => j.Armure);
+            IEnumerable<Armure> armuresDesJoueursSuivants = session.PartieEnCours.Joueurs.Select(j => j.Armure).ToArray();
 
             Assert.Equal(armuresDesJoueursSuivants, armuresDesJoueursInitiaux);
         }
@@ -57,11 +57,11 @@ namespace Cognac_Behourd.Test
 
             session.LancerProchainePartie();
 
-            IEnumerable<Personne> joueursInitiaux = session.PartieEnCours.Joueurs;
+            IEnumerable<Personne> joueursInitiaux = session.PartieEnCours.Joueurs.ToArray();
 
             session.AjouterJoueur(arrivant);
 
-            IEnumerable<Personne> joueursApresAjout = session.PartieEnCours.Joueurs;
+            IEnumerable<Personne> joueursApresAjout = session.PartieEnCours.Joueurs.ToArray();
 
             Assert.Equal(joueursInitiaux, joueursApresAjout);
         }
@@ -84,6 +84,51 @@ namespace Cognac_Behourd.Test
 
             Assert.Throws<InvalidOperationException>(() => session.AjouterJoueurs(joueurs));
             Assert.Empty(session.Joueurs);
+        }
+
+        [Fact]
+        public void Une_Personne_Peux_Quitter_Une_Session_En_Cours()
+        {
+            Session session = new Session();
+
+            Personne joueurDeDepart = new PersonneBuilder().Build();
+
+            session.AjouterJoueur(joueurDeDepart);
+
+            session.LancerProchainePartie();
+
+            Assert.NotEmpty(session.PartieEnCours.Joueurs);
+
+            session.SupprimerJoueur(joueurDeDepart);
+
+            session.LancerProchainePartie();
+
+            Assert.Throws<InvalidOperationException>(() => session.SupprimerJoueur(new PersonneBuilder().Build()));
+            Assert.Empty(session.PartieEnCours.Joueurs);
+        }
+
+        [Fact]
+        public void Des_Personnes_Peuvent_Quitter_Une_Session_En_Cours()
+        {
+            Session session = new Session();
+
+            IEnumerable<Personne> joueursDeDepart = new PersonneBuilder().Build(6);
+
+            IEnumerable<Personne> joueursQuiPartent = joueursDeDepart.Take(2);
+
+            IEnumerable<Personne> personnesQuiNexistePas = new PersonneBuilder().Build(1);
+
+            session.AjouterJoueurs(joueursDeDepart);
+
+            session.LancerProchainePartie();
+
+            session.SupprimerJoueurs(joueursQuiPartent);
+
+            session.LancerProchainePartie();
+
+            Assert.Throws<InvalidOperationException>(() => session.SupprimerJoueurs(personnesQuiNexistePas));            
+            Assert.Equal(joueursDeDepart.Count() - joueursQuiPartent.Count(), session.PartieEnCours.Joueurs.Count);
+            Assert.DoesNotContain(session.PartieEnCours.Joueurs, j => joueursQuiPartent.Contains(j));
         }
     }
 }
