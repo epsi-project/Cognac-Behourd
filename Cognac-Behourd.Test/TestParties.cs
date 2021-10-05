@@ -8,7 +8,7 @@ using Cognac_Behourd.Class.Builders;
 
 namespace Cognac_Behourd.Test
 {
-    public class UnitTest1
+    public class TestParties
     {
         [Fact]
         public void Les_Armes_Sont_Fixes_Elles_Ne_Changent_Pas_Sur_Une_Session()
@@ -73,14 +73,14 @@ namespace Cognac_Behourd.Test
 
             List<Personne> joueurs = new PersonneBuilder()
                 .SetDateNaissance(DateTime.Today.AddYears(-20))
-                .Build(10);
+                .Build(1);
 
             joueurs.AddRange(new PersonneBuilder()
                 .SetDateNaissance(DateTime.Today.AddYears(-15))
                 .Build(2));
 
             Assert.Throws<InvalidOperationException>(() => session.AjouterJoueurs(joueurs));
-            Assert.True(joueurs.All(j => j.Age > 16));
+            Assert.Empty(session.Joueurs);
         }
     }
 }

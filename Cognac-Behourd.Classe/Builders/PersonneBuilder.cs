@@ -14,6 +14,7 @@ namespace Cognac_Behourd.Class.Builders
         public string Prenom { get; set; } = string.Empty;
         public string Nom { get; set; } = string.Empty;
         public DateTime DateAdhesion { get; set; } = DateTime.Now;
+        public DateTime DateDeNaissance { get; set; } = DateTime.Now.AddYears(-25);
         public float Poids { get; set; } = 0f;
 
         public PersonneBuilder()
@@ -68,12 +69,13 @@ namespace Cognac_Behourd.Class.Builders
         }
         public PersonneBuilder SetDateNaissance(DateTime dateTime)
         {
-            throw new NotImplementedException();
+            DateDeNaissance = dateTime;
+            return this;
         }
 
         public Personne Build()
         {
-            return new Personne(Arme, Armure, Prenom, Nom, DateAdhesion, Poids);
+            return new Personne(Arme, Armure, Prenom, Nom, DateAdhesion, Poids, DateDeNaissance);
         }
 
         public List<Personne> Build(int number)
