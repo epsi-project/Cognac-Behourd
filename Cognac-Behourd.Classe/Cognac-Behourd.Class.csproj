@@ -7,5 +7,7 @@
 
   <ItemGroup>
     <Folder Include="Enumerations\" />
+    <Folder Include="Interfaces\" />
+    <Folder Include="Extensions\" />
   </ItemGroup>
 </Project>
