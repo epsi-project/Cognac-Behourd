@@ -5,4 +5,9 @@
     <RootNamespace>Cognac_Behourd.Class</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Enumerations\" />
+    <Folder Include="Interfaces\" />
+    <Folder Include="Extensions\" />
+  </ItemGroup>
 </Project>

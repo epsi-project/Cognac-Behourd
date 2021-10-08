@@ -34,7 +34,7 @@ namespace Cognac_Behourd.Classe
 
         public void LancerProchainePartie()
         {
-            this.PartieEnCours = new Partie(Joueurs);
+            PartieEnCours = new Partie(Joueurs);
         }
 
         public void SupprimerJoueur(Personne joueur)

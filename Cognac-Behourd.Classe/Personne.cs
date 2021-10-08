@@ -1,7 +1,10 @@
-﻿    using System;
+using System;
+using Cognac_Behourd.Class.Extensions;
+using Cognac_Behourd.Class.Interfaces;
+
 namespace Cognac_Behourd.Class
 {
-    public class Personne
+    public class Personne : IPesable
     {
         public Arme Arme { get; set; }
         public Armure Armure { get; set; }
@@ -13,16 +16,12 @@ namespace Cognac_Behourd.Class
         public DateTime DateAdhesion { get; set; }
 
         public float Poids { get; set; }
+
         public DateTime DateDeNaissance { get; set; }
 
-        public int Age {
-            get
-            {
-                return DateTime.Today.Year - DateDeNaissance.Year -
-                     (DateTime.Today.Month < DateDeNaissance.Month ? 1 :
-                     DateTime.Today.Day < DateDeNaissance.Day ? 1 : 0);
-            }
-        }
+        public int Age { get => DateDeNaissance.GetAge(); }
+
+        public int AnneeExperience { get => DateAdhesion.GetAge(); }
 
         public Personne(Arme arme, Armure armure, string prenom, string nom, DateTime dateAdhesion, float poids, DateTime dateDeNaissance)
         {
