@@ -8,7 +8,7 @@ namespace Cognac_Behourd.Class.Extensions
 {
     public static class CategoriePoidsExtension
     {
-        private static readonly Dictionary<int, CategoriePoids> categorieParPoidsMax = new Dictionary<int, CategoriePoids>()
+        private static readonly Dictionary<int, CategoriePoids> CategorieParPoidsMax = new Dictionary<int, CategoriePoids>()
         {
             { 52, CategoriePoids.Mouches },
             { 57, CategoriePoids.Legers },
@@ -32,8 +32,8 @@ namespace Cognac_Behourd.Class.Extensions
 
         public static CategoriePoids GetCategoriePoidsParPoids(float poids)
         {
-            int key = categorieParPoidsMax.Keys.OrderBy(k => k).First(k => k > poids);
-            return categorieParPoidsMax[key];
+            int key = CategorieParPoidsMax.Keys.OrderBy(k => k).First(k => k > poids);
+            return CategorieParPoidsMax[key];
         }
     }
 }

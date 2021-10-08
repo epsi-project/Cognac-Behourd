@@ -7,8 +7,7 @@ namespace Cognac_Behourd
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            Session test = new Session();
+            new Core(new Cli()).Run();
         }
     }
 }
