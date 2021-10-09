@@ -12,7 +12,6 @@ namespace Cognac_Behourd.Test
     public class CliFaker : IInteractable
     {
         public List<string> Resultats { get; }
-        public string LastResult => Resultats.Last();
 
         private readonly List<string> _reponses;
         private IEnumerator<string> _reponsesEnumerator;

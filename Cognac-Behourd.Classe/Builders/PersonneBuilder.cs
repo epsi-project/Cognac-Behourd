@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using Cognac_Behourd.Class.Enumerations;
 
 namespace Cognac_Behourd.Class.Builders
@@ -16,12 +15,7 @@ namespace Cognac_Behourd.Class.Builders
         private string _nom = string.Empty;
         private DateTime _dateAdhesion = DateTime.Now;
         private DateTime _dateDeNaissance = DateTime.Now.AddYears(-25);
-        private float _poids = 0f;
-
-        public PersonneBuilder()
-        {
-            
-        }
+        private float _poids;
 
         public PersonneBuilder SetNomPrenom(string nom, string prenom)
         {

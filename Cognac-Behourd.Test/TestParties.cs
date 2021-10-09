@@ -1,6 +1,5 @@
 using System;
 using Xunit;
-using Cognac_Behourd.Classe;
 using System.Collections.Generic;
 using Cognac_Behourd.Class;
 using System.Linq;
@@ -113,11 +112,11 @@ namespace Cognac_Behourd.Test
         {
             Session session = new Session();
 
-            IEnumerable<Personne> joueursDeDepart = new PersonneBuilder().Build(6);
+            List<Personne> joueursDeDepart = new PersonneBuilder().Build(6);
 
-            IEnumerable<Personne> joueursQuiPartent = joueursDeDepart.Take(2);
+            List<Personne> joueursQuiPartent = joueursDeDepart.Take(2).ToList();
 
-            IEnumerable<Personne> personnesQuiNexistePas = new PersonneBuilder().Build(1);
+            List<Personne> personnesQuiNexistePas = new PersonneBuilder().Build(1);
 
             session.AjouterJoueurs(joueursDeDepart);
 

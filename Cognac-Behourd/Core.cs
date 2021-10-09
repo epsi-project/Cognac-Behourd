@@ -7,15 +7,14 @@ using System.Threading;
 using Cognac_Behourd.Class;
 using Cognac_Behourd.Class.Builders;
 using Cognac_Behourd.Class.Enumerations;
-using Cognac_Behourd.Classe;
 using Cognac_Behourd.Enumerations;
 
 namespace Cognac_Behourd
 {
     public class Core
     {
-        private IInteractable _interactable;
-        private Session _session;
+        private readonly IInteractable _interactable;
+        private readonly Session _session;
         
         public Core(IInteractable interactable)
         {

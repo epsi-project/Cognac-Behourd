@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using Cognac_Behourd.Class.Enumerations;
 using Cognac_Behourd.Class.Interfaces;
@@ -11,12 +10,12 @@ namespace Cognac_Behourd.Class.Extensions
         private static readonly Dictionary<int, CategoriePoids> CategorieParPoidsMax = new Dictionary<int, CategoriePoids>()
         {
             { 52, CategoriePoids.Mouches },
-            { 57, CategoriePoids.Legers },
-            { 63, CategoriePoids.Lourds },
-            { 69, CategoriePoids.Legers },
-            { 75, CategoriePoids.Welters },
-            { 81, CategoriePoids.Moyens },
-            { 91, CategoriePoids.MiLourds },
+            { 57, CategoriePoids.Plumes },
+            { 63, CategoriePoids.Legers },
+            { 69, CategoriePoids.Welters },
+            { 75, CategoriePoids.Moyens },
+            { 81, CategoriePoids.MiLourds },
+            { 91, CategoriePoids.Lourds },
             { int.MaxValue, CategoriePoids.SuperLourds },
         };
 
