@@ -20,7 +20,8 @@ namespace Cognac_Behourd.Test
             cliFaker.EntrerPersonne(personneAjoutee);
             
             cliFaker.ChoisirMenu(MenuOption.AfficherToutLesJoueurs);
-
+            cliFaker.ChoisirMenu(MenuOption.Quitter);
+            
             new Core(cliFaker).Run();
             
             Assert.Contains(cliFaker.Resultats, r => r.Contains("OIRY") && r.Contains("Théo"));
@@ -32,10 +33,11 @@ namespace Cognac_Behourd.Test
             CliFaker cliFaker = new CliFaker();
             
             cliFaker.ChoisirMenu(MenuOption.LancerLaPartie);
+            cliFaker.ChoisirMenu(MenuOption.Quitter);
             
             new Core(cliFaker).Run();
             
-            Assert.Equal("La partie est prête!", cliFaker.LastResult); 
+            Assert.Contains("La partie est prête!\n", cliFaker.Resultats); 
         }
     }
 }

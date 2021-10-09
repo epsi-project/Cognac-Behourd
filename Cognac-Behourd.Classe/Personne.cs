@@ -34,5 +34,11 @@ namespace Cognac_Behourd.Class
             Poids = poids;
             DateDeNaissance = dateDeNaissance;
         }
+
+        public override string ToString()
+        {
+            return
+                $"{Nom} {Prenom} - Arme: {Arme.Name}, Armure: {ArmureType.ToString()}, Categorie: {this.GetCategoriePoids().ToString()}, Age: {Age}ans, Experience:{AnneeExperience}ans";
+        }
     }
 }

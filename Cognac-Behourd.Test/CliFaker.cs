@@ -43,8 +43,8 @@ namespace Cognac_Behourd.Test
 
         public void EntrerPersonne(Personne personne)
         {
-            AddReponse(personne.Prenom);
             AddReponse(personne.Nom);
+            AddReponse(personne.Prenom);
             AddReponse(personne.Arme.Name);
             AddReponse(((int)personne.ArmureType).ToString());
             AddReponse(personne.Poids.ToString(CultureInfo.InvariantCulture));
