@@ -1,10 +1,13 @@
-﻿using System;
+﻿
 namespace Cognac_Behourd.Class
 {
     public class Arme
     {
-        public Arme()
+        public string Name { get; set; }
+
+        public Arme(string name)
         {
+            Name = name;
         }
     }
 }

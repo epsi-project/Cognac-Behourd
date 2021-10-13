@@ -1,14 +1,10 @@
-﻿using Cognac_Behourd.Classe;
-using System;
-
-namespace Cognac_Behourd
+﻿namespace Cognac_Behourd
 {
-    class Program
+    internal static class Program
     {
-        static void Main(string[] args)
+        private static void Main()
         {
-            Console.WriteLine("Hello World!");
-            Session test = new Session();
+            new Core(new Cli()).Run();
         }
     }
 }

@@ -1,39 +1,34 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
+using Cognac_Behourd.Class.Enumerations;
 
 namespace Cognac_Behourd.Class.Builders
 {
     public class PersonneBuilder
     {
-        private static Random random = new Random();
+        private static Random _random = new Random();
 
-        private Arme arme = new Arme();
-        private Armure armure = new Armure();
-        private string prenom = string.Empty;
-        private string nom = string.Empty;
-        private DateTime dateAdhesion = DateTime.Now;
-        private DateTime dateDeNaissance = DateTime.Now.AddYears(-25);
-        private float poids = 0f;
-
-        public PersonneBuilder()
-        {
-            
-        }
+        private Arme _arme = new Arme("");
+        private ArmureType _armureType = ArmureType.None;
+        private string _prenom = string.Empty;
+        private string _nom = string.Empty;
+        private DateTime _dateAdhesion = DateTime.Now;
+        private DateTime _dateDeNaissance = DateTime.Now.AddYears(-25);
+        private float _poids;
 
         public PersonneBuilder SetNomPrenom(string nom, string prenom)
         {
-            this.nom = nom;
-            this.prenom = prenom;
+            this._nom = nom;
+            this._prenom = prenom;
 
             return this;
         }
 
         public PersonneBuilder SetRandomNomPrenom()
         {
-            nom = RandomString(5);
-            prenom = RandomString(5);
+            _nom = RandomString(5);
+            _prenom = RandomString(5);
 
             return this;
         }
@@ -42,40 +37,40 @@ namespace Cognac_Behourd.Class.Builders
         {
             const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
             return new string(Enumerable.Repeat(chars, length)
-              .Select(s => s[random.Next(s.Length)]).ToArray());
+              .Select(s => s[_random.Next(s.Length)]).ToArray());
         }
 
         public PersonneBuilder SetArme(Arme arme)
         {
-            this.arme = arme;
+            this._arme = arme;
             return this;
         }
-        public PersonneBuilder SetArmure(Armure armure)
+        public PersonneBuilder SetArmure(ArmureType armureType)
         {
-            this.armure = armure;
+            this._armureType = armureType;
             return this;
         }
 
         public PersonneBuilder SetDateAdhesion(DateTime date)
         {
-            dateAdhesion = date;
+            _dateAdhesion = date;
             return this;
         }
 
         public PersonneBuilder SetPoids(float poids)
         {
-            this.poids = poids;
+            this._poids = poids;
             return this;
         }
         public PersonneBuilder SetDateNaissance(DateTime dateTime)
         {
-            dateDeNaissance = dateTime;
+            _dateDeNaissance = dateTime;
             return this;
         }
 
         public Personne Build()
         {
-            return new Personne(arme, armure, prenom, nom, dateAdhesion, poids, dateDeNaissance);
+            return new Personne(_arme, _armureType, _prenom, _nom, _dateAdhesion, _poids, _dateDeNaissance);
         }
 
         public List<Personne> Build(int number)

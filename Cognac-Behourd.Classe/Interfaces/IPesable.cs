@@ -1,5 +1,4 @@
-﻿using System;
-namespace Cognac_Behourd.Class.Interfaces
+﻿namespace Cognac_Behourd.Class.Interfaces
 {
     public interface IPesable
     {

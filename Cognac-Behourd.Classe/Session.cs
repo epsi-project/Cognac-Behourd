@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Cognac_Behourd.Class;
 
-namespace Cognac_Behourd.Classe
+namespace Cognac_Behourd.Class
 {
     public class Session
     {
@@ -24,7 +23,7 @@ namespace Cognac_Behourd.Classe
             Joueurs.Add(arrivant);
         }
 
-        public void AjouterJoueurs(IEnumerable<Personne> personnes)
+        public void AjouterJoueurs(List<Personne> personnes)
         {
             if(personnes.Any(p => p.Age < 16))
                 throw new InvalidOperationException("Pas de behourd en dessous de 16 ans");
@@ -45,12 +44,12 @@ namespace Cognac_Behourd.Classe
                 throw new InvalidOperationException("Joueur non présent dans la partie");
         }
 
-        public void SupprimerJoueurs(IEnumerable<Personne> joueursQuiPartent)
+        public void SupprimerJoueurs(List<Personne> joueursQuiPartent)
         {
             if(joueursQuiPartent.Any(j => !Joueurs.Contains(j)))
                 throw new InvalidOperationException("Joueur non présent dans la partie");
             
-            Joueurs.RemoveAll(j => joueursQuiPartent.Contains(j));
+            Joueurs.RemoveAll(joueursQuiPartent.Contains);
         }
     }
 }

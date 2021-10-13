@@ -1,10 +1,10 @@
 using System;
 using Xunit;
-using Cognac_Behourd.Classe;
 using System.Collections.Generic;
 using Cognac_Behourd.Class;
 using System.Linq;
 using Cognac_Behourd.Class.Builders;
+using Cognac_Behourd.Class.Enumerations;
 
 namespace Cognac_Behourd.Test
 {
@@ -35,11 +35,11 @@ namespace Cognac_Behourd.Test
             session.AjouterJoueurs(new PersonneBuilder().Build(4));
             session.LancerProchainePartie();
 
-            IEnumerable<Armure> armuresDesJoueursInitiaux = session.PartieEnCours.Joueurs.Select(j => j.Armure).ToArray();
+            IEnumerable<ArmureType> armuresDesJoueursInitiaux = session.PartieEnCours.Joueurs.Select(j => j.ArmureType).ToArray();
 
             session.LancerProchainePartie();
 
-            IEnumerable<Armure> armuresDesJoueursSuivants = session.PartieEnCours.Joueurs.Select(j => j.Armure).ToArray();
+            IEnumerable<ArmureType> armuresDesJoueursSuivants = session.PartieEnCours.Joueurs.Select(j => j.ArmureType).ToArray();
 
             Assert.Equal(armuresDesJoueursSuivants, armuresDesJoueursInitiaux);
         }
@@ -112,11 +112,11 @@ namespace Cognac_Behourd.Test
         {
             Session session = new Session();
 
-            IEnumerable<Personne> joueursDeDepart = new PersonneBuilder().Build(6);
+            List<Personne> joueursDeDepart = new PersonneBuilder().Build(6);
 
-            IEnumerable<Personne> joueursQuiPartent = joueursDeDepart.Take(2);
+            List<Personne> joueursQuiPartent = joueursDeDepart.Take(2).ToList();
 
-            IEnumerable<Personne> personnesQuiNexistePas = new PersonneBuilder().Build(1);
+            List<Personne> personnesQuiNexistePas = new PersonneBuilder().Build(1);
 
             session.AjouterJoueurs(joueursDeDepart);
 

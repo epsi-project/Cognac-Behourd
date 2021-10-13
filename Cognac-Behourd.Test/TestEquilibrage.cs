@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using Cognac_Behourd.Class;
 using Cognac_Behourd.Class.Builders;
 using Cognac_Behourd.Class.Enumerations;
-using Cognac_Behourd.Classe;
 using Xunit;
 
 namespace Cognac_Behourd.Test
