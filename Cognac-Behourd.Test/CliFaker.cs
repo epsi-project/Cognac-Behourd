@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
 using System.Threading;
 using Cognac_Behourd.Class;
 using Cognac_Behourd.Enumerations;

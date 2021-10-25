@@ -41,6 +41,7 @@ namespace Cognac_Behourd
                         AfficherToutLesJoueurs();
                         break;
                     case MenuOption.AfficherLesEquipesDeLaPartieEnCours:
+                        AfficherLesEquipesDeLaPartieEnCours();
                         break;
                     case MenuOption.Quitter:
                         exit = true;
@@ -118,6 +119,12 @@ namespace Cognac_Behourd
         private void AfficherToutLesJoueurs()
         {
             foreach (Personne personne in _session.Joueurs)
+                _interactable.Ecrire(personne.ToString());
+        }
+
+        private void AfficherLesEquipesDeLaPartieEnCours()
+        {
+            foreach (Personne personne in _session.PartieEnCours.Joueurs)
                 _interactable.Ecrire(personne.ToString());
         }
     }
